@@ -3,6 +3,7 @@
 // array => collection of elements
 // srting => collection of characters => "hello"
 // css => cascading style sheet => style
+
 const errors = document.getElementsByClassName("form-error")
 
 function handleResetErrors() {
