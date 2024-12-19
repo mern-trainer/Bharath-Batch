@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form onsubmit="return handleSubmit()">
+    <form onsubmit="return handleSubmit()" oninput="handleResetErrors()">
         <input type="text" id="username" name="username" placeholder="Username">
-        <input type="text" name="password" id="password" placeholder="Password">
+        <span class="form-error"></span>
+        <input type="password" name="password" id="password" placeholder="Password">
+        <span class="form-error"></span>
         <button type="submit">Login</button>
     </form>
     <script src="script.js"></script>
