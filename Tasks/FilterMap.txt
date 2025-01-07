@@ -13,3 +13,4 @@
 13. Write a function that takes an array of strings and a character, and returns a new array where all strings containing the specified character are removed using the filter method.
 14. Write a function that takes an array of strings and returns a new array where each string is replaced by its length using the map method.
 
+

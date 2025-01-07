@@ -49,7 +49,7 @@ console.log(res2);
 
 const result = arr.map(function (element) {
     if (element % 2 == 0) {
-        return element * 2   
+        return element * 2
     }
     return element
 })
@@ -61,3 +61,37 @@ const res3 = array.map(function (element) {
 })
 
 console.log(res3);
+
+// **************************************************************************
+
+// reduce, find, findIndex
+
+const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// reduce => returns a single value from an array by applying a specified function to each element in the array
+
+// let s = 0
+// for (let i = 0; i < arr.length; i++){
+//     s += arr[i]
+// }
+// console.log(s);
+
+// const sum = arr.reduce(function (prev, element) {
+//     return prev * element
+// }, 1)
+// console.log(sum);
+
+// find => returns the first element in an array that matches a specified condition
+// findIndex => returns the index of the first element in an array that matches a specified condition
+
+const res4 = arr2.find(function (element) {
+    return element == 5    
+})
+
+console.log(res4);
+
+const res5 = arr2.findIndex(function (element) {
+    return element == 5    
+})
+
+console.log(res5);
