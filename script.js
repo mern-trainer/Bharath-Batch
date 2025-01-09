@@ -84,14 +84,100 @@ const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // find => returns the first element in an array that matches a specified condition
 // findIndex => returns the index of the first element in an array that matches a specified condition
 
-const res4 = arr2.find(function (element) {
-    return element == 5    
-})
+// const res4 = arr2.find(function (element) {
+//     return element == 5
+// })
 
-console.log(res4);
+// console.log(res4);
 
-const res5 = arr2.findIndex(function (element) {
-    return element == 5    
-})
+// const res5 = arr2.findIndex(function (element) {
+//     return element == 5
+// })
 
-console.log(res5);
+// console.log(res5);
+
+// oops => out of place operations
+
+// array => A collection of elements
+// object => A collection of key-value pairs
+
+// const obj = {
+//     name: "Arjun",
+//     age: 20,
+//     place: "Mavoor"
+// }
+
+// obj.city = "Kozhikode"
+
+// console.log(obj);
+
+// OOP => Object Oriented Programming
+
+// class => Template or Blueprint for creating objects
+// object => Instance of a class
+//              Can be created using the new keyword
+//              Can create multiple objects of the same class
+// keywords => Pre reserved words
+
+// camelCase => firstName
+// PascalCase => FirstName
+
+// constructor function => Special function that is called when an object is created
+// Attributes / Properties / Variables => Properties of an object
+// Methods => Functions that are associated with an object
+
+class Vehicle {
+    constructor(number) {
+        this.number = number
+    }
+
+    display() {
+        console.log(this.number);
+    }
+
+}
+
+const obj1 = new Vehicle(1000)
+
+obj1.display()
+
+// new keyword => memory allocation
+// this => points to the current object
+// this => global object
+
+// 4 pillars of OOP
+
+// Encapsulation => Data hiding / binding data into a single unit
+// Abstraction => Hiding the implementation details or unnecessary details
+// Inheritance => Reusing the code => Extending properties and methods from a parent class
+// Polymorphism => Multiple forms => Different ways of doing the same thing
+                // overloading => Same name different arguments
+                // overriding => Same name same arguments but different implementation
+                
+class Parent{
+    constructor(value) {
+        this.value = value
+    }
+
+    display() {
+        return this.value
+    }
+}
+
+class Child extends Parent{
+    //@override
+    display() {
+        return this.value * 2
+    }
+
+    parentDisplay() {
+        console.log(super.display());
+    }
+}
+
+const obj = new Child(1990)
+
+const response = obj.display()
+obj.parentDisplay()
+
+console.log(response);
