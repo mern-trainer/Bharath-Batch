@@ -137,9 +137,9 @@ class Vehicle {
 
 }
 
-const obj1 = new Vehicle(1000)
+const obj1 = new Vehicle(1000) // creating object using new keyword and constructor function, initializing attributes of the object using constructor function
 
-obj1.display()
+obj1.display() // invoking method of the object
 
 // new keyword => memory allocation
 // this => points to the current object
@@ -155,29 +155,37 @@ obj1.display()
                 // overriding => Same name same arguments but different implementation
                 
 class Parent{
+
+    #data; // private variable
     constructor(value) {
         this.value = value
+        this.#data = value // assigned to private variable
     }
 
     display() {
         return this.value
     }
+
+    call_private() { // invoking private variable
+        return this.#data
+    }
 }
 
-class Child extends Parent{
+class Child extends Parent{ // inheriting properties and methods from parent class using extends keyword
     //@override
-    display() {
+    display() { // overrided method from parent
         return this.value * 2
     }
 
     parentDisplay() {
-        console.log(super.display());
+        console.log(super.display()); // invoking parent method from child class using super keyword.
     }
 }
 
-const obj = new Child(1990)
+const obj = new Child(1990) 
 
-const response = obj.display()
-obj.parentDisplay()
+const response = obj.display() // return value of display method
+
+obj.parentDisplay() // invoking parentDisplay method
 
 console.log(response);
