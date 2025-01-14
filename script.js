@@ -3,27 +3,27 @@
 // **********************************************************************
 
 function display() {
-    console.log("Display function called");
+  console.log("Display function called");
 }
 
 function myFunction(callbackFunc) {
-    callbackFunc()
+  callbackFunc();
 }
 
-myFunction(display)
+myFunction(display);
 
 // **********************************************************************
 
 function display(value) {
-    console.log(value);
+  console.log(value);
 }
 
 function sum(a, b, callbackFunc) {
-    const r = a + b
-    callbackFunc(r)
+  const r = a + b;
+  callbackFunc(r);
 }
 
-sum(10, 20, display)
+sum(10, 20, display);
 
 // **********************************************************************
 
@@ -31,16 +31,27 @@ sum(10, 20, display)
 
 // array filter => returns a new array containing elements that pass a test
 
-const arr = [20, 56, 38, 29, 10, 64, 89, 45, 32, 96]
-const array = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi", "lemon"]
+const arr = [20, 56, 38, 29, 10, 64, 89, 45, 32, 96];
+const array = [
+  "apple",
+  "banana",
+  "cherry",
+  "date",
+  "elderberry",
+  "fig",
+  "grape",
+  "honeydew",
+  "kiwi",
+  "lemon",
+];
 
 const res = arr.filter(function (element) {
-    return element % 2 == 0
-})
+  return element % 2 == 0;
+});
 
 const res2 = array.filter(function (element) {
-    return element.length > 5
-})
+  return element.length > 5;
+});
 
 console.log(res2);
 
@@ -48,17 +59,17 @@ console.log(res2);
 // map => array manipulation
 
 const result = arr.map(function (element) {
-    if (element % 2 == 0) {
-        return element * 2
-    }
-    return element
-})
+  if (element % 2 == 0) {
+    return element * 2;
+  }
+  return element;
+});
 
 console.log(result);
 
 const res3 = array.map(function (element) {
-    return element.toUpperCase()
-})
+  return element.toUpperCase();
+});
 
 console.log(res3);
 
@@ -127,19 +138,18 @@ const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Methods => Functions that are associated with an object
 
 class Vehicle {
-    constructor(number) {
-        this.number = number
-    }
+  constructor(number) {
+    this.number = number;
+  }
 
-    display() {
-        console.log(this.number);
-    }
-
+  display() {
+    console.log(this.number);
+  }
 }
 
-const obj1 = new Vehicle(1000) // creating object using new keyword and constructor function, initializing attributes of the object using constructor function
+const obj1 = new Vehicle(1000); // creating object using new keyword and constructor function, initializing attributes of the object using constructor function
 
-obj1.display() // invoking method of the object
+obj1.display(); // invoking method of the object
 
 // new keyword => memory allocation
 // this => points to the current object
@@ -151,41 +161,174 @@ obj1.display() // invoking method of the object
 // Abstraction => Hiding the implementation details or unnecessary details
 // Inheritance => Reusing the code => Extending properties and methods from a parent class
 // Polymorphism => Multiple forms => Different ways of doing the same thing
-                // overloading => Same name different arguments
-                // overriding => Same name same arguments but different implementation
-                
-class Parent{
+// overloading => Same name different arguments
+// overriding => Same name same arguments but different implementation
 
-    #data; // private variable
-    constructor(value) {
-        this.value = value
-        this.#data = value // assigned to private variable
-    }
+// class Parent{
 
-    display() {
-        return this.value
-    }
+//     #data; // private variable
+//     constructor(value) {
+//         this.value = value
+//         this.#data = value    // assigned to private variable
+//     }
 
-    call_private() { // invoking private variable
-        return this.#data
-    }
-}
+//     display() {
+//         return this.value
+//     }
 
-class Child extends Parent{ // inheriting properties and methods from parent class using extends keyword
-    //@override
-    display() { // overrided method from parent
-        return this.value * 2
-    }
+//     call_private() { // invoking private variable
+//         return this.#data
+//     }
+// }
 
-    parentDisplay() {
-        console.log(super.display()); // invoking parent method from child class using super keyword.
-    }
-}
+// class Child extends Parent{ // inheriting properties and methods from parent class using extends keyword
+//     //@override
+//     display() { // overrided method from parent
+//         return this.value * 2
+//     }
 
-const obj = new Child(1990) 
+//     parentDisplay() {
+//         console.log(super.display()); // invoking parent method from child class using super keyword.
+//     }
+// }
 
-const response = obj.display() // return value of display method
+// const obj = new Child(1990)
 
-obj.parentDisplay() // invoking parentDisplay method
+// const response = obj.display() // return value of display method
 
-console.log(response);
+// obj.parentDisplay() // invoking parentDisplay method
+
+// console.log(response);
+
+const obj = {
+  name: "Arjun",
+  age: 20,
+  address: {
+    city: "Kozhikode",
+    state: "Kerala",
+    country: "India",
+  },
+  degree: ["B.Tech", "M.Tech", "MBA"],
+  marks: {
+    physics: 80,
+    chemistry: 90,
+    biology: 85,
+  },
+};
+
+const fruits = [
+  "apple",
+  "banana",
+  "cherry",
+  "date",
+  "elderberry",
+  "fig",
+  "grape",
+  "honeydew",
+  "kiwi",
+  "lemon",
+];
+
+// destructuring => extracting data from an object or array
+
+// const apple = fruits[0]
+// const banana = fruits[1]
+// const cherry = fruits[2]
+// const date = fruits[3]
+// const elderberry = fruits[4]
+// const fig = fruits[5]
+// const grape = fruits[6]
+// const honeydew = fruits[7]
+// const kiwi = fruits[8]
+// const lemon = fruits[9]
+
+const [a, b, c] = fruits;
+
+console.log(a, b, c);
+
+// const age = obj.age
+// const name = obj.name
+// const address = obj.address
+// const city = address.city
+
+// console.log(age, name, address, city);
+
+const { age, name: username } = obj; // alias
+
+console.log(age, username);
+
+// spread operator => ... => copying data from one object or array to another.
+// rest operator => ... => extracting remaining data from an object or array
+
+const arr1 = [1, 2, 3];
+const arr3 = [...arr1]; // pass by reference => pass by value
+arr3.push(4);
+console.log(arr1, arr3);
+
+const userObj = {
+  name: "Arjun",
+};
+
+const secondObj = { ...userObj };
+
+secondObj.age = 20;
+
+console.log(userObj, secondObj);
+
+const students = ["Alex", "Rahul", "Amal", "Ramesh", "Raju"];
+
+const [student1, student2, ...remainingStudents] = students;
+
+console.log(student1, student2, remainingStudents);
+
+const { address, marks, ...remainingData } = obj;
+
+console.log(remainingData);
+
+// destructure, spread, rest
+
+// 1. Merge 2 arrays
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+
+// const mergedArray = array1.concat(array2)
+const mergedArray = [...array1, ...array2];
+
+console.log(mergedArray);
+
+// map. filter. reduce
+
+const users = [
+  { name: "Alex", age: 21, salary: 30000 },
+  { name: "Amal", age: 20, salary: 50000 },
+  { name: "Aswin", age: 30, salary: 20000},
+  { name: "Rahul", age: 25, salary: 35000},
+  { name: "Midhun", age: 20, salary: 70000},
+];
+
+const filteredData = users.filter(function (user) {
+    return user.salary < 50000
+})
+
+console.log(filteredData);
+
+const mappedData = users.map(function (user) {
+    if (user.age == 20) {
+        // user.salary = 1_00_000
+        // return user
+        return {...user, slry: 1_00_000}
+    }  
+    return user
+})
+
+console.log(mappedData);
+
+const avgOfAges = users.reduce(function (prev, user) {
+  return prev + user.salary
+}, 0)
+
+const avg = avgOfAges / users.length
+
+console.log(avg);
+
