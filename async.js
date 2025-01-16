@@ -42,18 +42,14 @@ const sample = (a, b) => a + b
 // states of promise => pending, fulfilled, rejected, settled: fulfilled or rejected
 
 const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        reject("Hi")
-    }, 3000);
+    resolve("Hi")
 })
 
 // then => used to handle the result of a promise
 // catch => used to handle the error of a promise
 
 promise.then((success) => {
-    
     console.log(success);
 }).catch((error) => {
-    console.log(promise);
     console.log("error:",error);
 })
