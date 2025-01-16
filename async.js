@@ -41,15 +41,32 @@ const sample = (a, b) => a + b
 
 // states of promise => pending, fulfilled, rejected, settled: fulfilled or rejected
 
-const promise = new Promise((resolve, reject) => {
-    resolve("Hi")
-})
+const promiseFunc = () => {
+    return new Promise((resolve, reject) => {
+        resolve("Hi")
+    })
+}
 
 // then => used to handle the result of a promise
 // catch => used to handle the error of a promise
 
-promise.then((success) => {
+promiseFunc().then((success) => {
     console.log(success);
 }).catch((error) => {
     console.log("error:",error);
+})
+
+// application
+
+// api => application programming interface => interface between client and server
+// => used to exchange data between client and server
+
+// fetch => used to fetch data from an API
+
+fetch("https://dummyj4son.com/products").then((response) => {
+    return response.json()
+}).then((res) => {
+    console.log(res);
+}).catch((error) => {
+    console.log(error);
 })
