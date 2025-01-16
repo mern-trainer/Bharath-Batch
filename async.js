@@ -63,7 +63,7 @@ promiseFunc().then((success) => {
 
 // fetch => used to fetch data from an API
 
-fetch("https://dummyj4son.com/products").then((response) => {
+fetch("https://dummyjson.com/products").then((response) => {
     return response.json()
 }).then((res) => {
     console.log(res);
