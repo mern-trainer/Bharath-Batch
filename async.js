@@ -155,6 +155,8 @@ map.delete("age")
 // console.log(map);
 // console.log(is_present2);
 
+// localStorage.setItem("nameOfUser", "John")
+
 // const user = localStorage.getItem("nameOfUser")
 // console.log(user);
 
@@ -199,4 +201,3 @@ const sumOfNNumbers = (n) => {
 }
 
 console.log(sumOfNNumbers(10));
-
