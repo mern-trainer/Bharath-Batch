@@ -340,3 +340,4 @@
           // => Promise is the way to handle asynchronous operations in JavaScript.
 // async => an asynchronous function is a function that returns a Promise object.
 // await => await keyword is used to pause the execution of the code until the promise is resolved.
+
