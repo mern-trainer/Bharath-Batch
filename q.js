@@ -33,6 +33,8 @@ const sum = (num1, num2) => {
     return s
 }
 
+const obj = '{"name": "Alex", "place": "kkd"}'
+
 // console.log(sum(10, 20));
 // console.log(sum(10, 20));
 // console.log(sum(10, 20));
@@ -42,37 +44,101 @@ const sum = (num1, num2) => {
 
 // application
 
-const cache = new Map()
-
 const getUsers = async (id) => {
-    if (cache.has(id)) {
-        return cache.get(id)
+    if (localStorage.getItem(id)) {
+        return JSON.parse(localStorage.getItem(id))
     }
     console.log("Fetching data...");
     const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
     const result = await response.json()
-    cache.set(id, result)
+    localStorage.setItem(id, JSON.stringify(result))
     return result
 }
 
 const getData = async () => {
-    let users = await getUsers(20)
+    let users = await getUsers(61)
     console.log(users);
-    users = await getUsers(20)
+    users = await getUsers(62)
     console.log(users);
-    users = await getUsers(20)
+    users = await getUsers(109)
     console.log(users);
-    users = await getUsers(20)
+    users = await getUsers(110)
     console.log(users);
-    users = await getUsers(20)
+    users = await getUsers(111)
     console.log(users);
-    users = await getUsers(20)
+    users = await getUsers(112)
     console.log(users);
-    users = await getUsers(20)
+    users = await getUsers(113)
     console.log(users);
-    users = await getUsers(20)
+    users = await getUsers(114)
     console.log(users);
-    users = await getUsers(20)
+    users = await getUsers(115)
+    console.log(users);
+    users = await getUsers(116)
+    console.log(users);
+    users = await getUsers(117)
+    console.log(users);
+    users = await getUsers(118)
+    console.log(users);
+    users = await getUsers(119)
+    console.log(users);
+    users = await getUsers(120)
+    console.log(users);
+    users = await getUsers(121)
+    console.log(users);
+    users = await getUsers(122)
+    console.log(users);
+    users = await getUsers(123)
+    console.log(users);
+    users = await getUsers(124)
+    console.log(users);
+    users = await getUsers(125)
+    console.log(users);
+    users = await getUsers(126)
+    console.log(users);
+    users = await getUsers(127)
+    console.log(users);
+    users = await getUsers(128)
+    console.log(users);
+    users = await getUsers(129)
+    console.log(users);
+    users = await getUsers(136)
+    console.log(users);
+    users = await getUsers(137)
+    console.log(users);
+    users = await getUsers(138)
+    console.log(users);
+    users = await getUsers(139)
+    console.log(users);
+    users = await getUsers(140)
+    console.log(users);
+    users = await getUsers(141)
+    console.log(users);
+    users = await getUsers(142)
+    console.log(users);
+    users = await getUsers(143)
+    console.log(users);
+    users = await getUsers(160)
+    console.log(users);
+    users = await getUsers(161)
+    console.log(users);
+    users = await getUsers(162)
+    console.log(users);
+    users = await getUsers(163)
+    console.log(users);
+    users = await getUsers(164)
+    console.log(users);
+    users = await getUsers(165)
+    console.log(users);
+    users = await getUsers(166)
+    console.log(users);
+    users = await getUsers(167)
+    console.log(users);
+    users = await getUsers(168)
+    console.log(users);
+    users = await getUsers(169)
+    console.log(users);
+    users = await getUsers(170)
     console.log(users);
 }
 
