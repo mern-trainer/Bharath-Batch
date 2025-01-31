@@ -33,10 +33,47 @@ const sum = (num1, num2) => {
     return s
 }
 
-console.log(sum(10, 20));
-console.log(sum(10, 20));
-console.log(sum(10, 20));
-console.log(sum(10, 20));
-console.log(sum(10, 20));
+// console.log(sum(10, 20));
+// console.log(sum(10, 20));
+// console.log(sum(10, 20));
+// console.log(sum(10, 20));
+// console.log(sum(10, 20));
 
 
+// application
+
+const cache = new Map()
+
+const getUsers = async (id) => {
+    if (cache.has(id)) {
+        return cache.get(id)
+    }
+    console.log("Fetching data...");
+    const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+    const result = await response.json()
+    cache.set(id, result)
+    return result
+}
+
+const getData = async () => {
+    let users = await getUsers(20)
+    console.log(users);
+    users = await getUsers(20)
+    console.log(users);
+    users = await getUsers(20)
+    console.log(users);
+    users = await getUsers(20)
+    console.log(users);
+    users = await getUsers(20)
+    console.log(users);
+    users = await getUsers(20)
+    console.log(users);
+    users = await getUsers(20)
+    console.log(users);
+    users = await getUsers(20)
+    console.log(users);
+    users = await getUsers(20)
+    console.log(users);
+}
+
+getData()
