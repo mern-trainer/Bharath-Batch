@@ -201,3 +201,15 @@ const sumOfNNumbers = (n) => {
 }
 
 console.log(sumOfNNumbers(10));
+
+const maxi = (arr, max=arr[0]) => {
+    if(arr.length == 0){
+        return max
+    }
+    if(arr[0] > max){
+        return maxi(arr.slice(1), arr[0])
+    }
+    return maxi(arr.slice(1), max)
+}
+
+console.log(maxi([1, 2, 3, 4, 5, 6, 2, 3, 4, 5, 8]));
