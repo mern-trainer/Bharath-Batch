@@ -19,17 +19,17 @@
 //                When a function is called with the same arguments as a previous call,
 //                the function returns the cached result instead of recalculating it.
 
-const map = new Map()
+const map = {}
 
 const sum = (num1, num2) => {
     const key = num1 + "," + num2
-    if (map.has(key)) {
+    if (map[key]) {
         console.log("Cached value", key);
-        return map.get(key)
+        return map[key]
     }
     console.log("Calculating...", key);
     const s = num1 + num2;
-    map.set(key, s)
+    map[key] = s
     return s
 }
 
