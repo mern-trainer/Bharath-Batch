@@ -1,0 +1,52 @@
+-> JavaScript => JavaScript is a client-side programming language. It is used to create interactive web pages and web applications.
+-> Variable => A variable is a container for storing data values. It can be used to hold values such as numbers, strings, objects, and more.
+-> Identifier => An identifier is a name that is used to identify a variable, function, class, etc.
+-> Keyword => A keyword is a reserved word that cannot be used as an identifier.
+-> Data Types => A type of data that can be stored in a variable.
+-> String => A string is a sequence of characters / collection of characters.
+-> Array => A collection of elements.
+-> Object => A collection of key-value pairs.
+-> DOM => Document Object Model => It is a programming interface for web documents. Can be used to access and manipulate the structure, content, styles, and behavior of HTML documents.
+        => Can handle events like click, mouseover, mouseout, etc.
+-> Synchronous => line by line execution
+-> Asynchronous => Can be executed multiple tasks at the same time
+-> Callback Function => Function passed as an argument to another function is called a callback function.
+-> Promise => Represents the eventual completion (or failure) of an asynchronous operation.
+-> Async/Await => Handle asynchronous operations in JavaScript.
+-> spread operator => ... => copying data from one object or array to another.
+-> rest operator => ... => extracting remaining data from an object or array
+-> closure => Closure is a function that has access to the variables of its parent function even after the parent function has closed.
+-> Memoization => Memoization is a technique used to improve the performance of a function by storing the results of its previous calls by caching the results of its previous calls.
+-> Recursion => Recursion is a programming technique where a function calls itself to solve a problem.
+
+-> REACT JS 
+
+-> React => React is a JavaScript library for building user interfaces.
+-> HTML, CSS, JS => DOM
+
+-> camel case -> firstName
+-> pascal case -> FirstName
+-> snake case -> first_name
+
+-> 
+
+-> Features => 
+            - Single Page Application (SPA)
+            - JSX -> JavaScript XML => JSX is a syntax extension for JavaScript that allows 
+                    you to write HTML-like code in JavaScript.
+            - One way data binding / unidirectional data flow
+            - Virtual DOM => Lightweight copy of the real DOM
+            - Component based architecture
+
+-> Installation => 
+            -> NodeJS, NPM, React, ReactDOM
+
+=> NodeJS -> JavaScript runtime environment
+            -> Install from https://nodejs.org
+=> NPM -> Node Package Manager
+=> React -> JavaScript library for building user interfaces
+=> ReactDOM => JavaScript library for working with the DOM
+
+=> Reconcilation => The process of comparing the virtual DOM with the real DOM 
+                    and updating the real DOM to match the virtual DOM 
+                    using the library such as ReactDOM.
