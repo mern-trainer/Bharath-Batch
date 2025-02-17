@@ -1,16 +1,22 @@
-import { Fragment } from "react"
-import HomePage from "./Pages/HomePage"
-import { Alert, Badge, Button, Image } from "react-bootstrap"
-import { IoNotificationsCircle } from "react-icons/io5";
-import ShopPage from "./Pages/ShopPage";
+import { useState } from "react"
+
+// state -> state is a variable that holds data that can change over time
+// Hooks -> Hooks are functions that let you use state and other React features 
+// without writing a class
 
 const App = () => {
-    return <Fragment>
-        {/* <HomePage /> */}
-        <ShopPage />
-    </Fragment>
+
+    // let value = 0
+    const [counter, setCounter] = useState(10)
+
+    const handleClick = () => {
+        setCounter(counter + 1)
+    }
+
+    return <div className="d-flex flex-column gap-3 align-items-center">
+        <div>{counter}</div>
+        <button onClick={handleClick}>Increment</button>
+    </div>
 }
 
-export default App
-
-// pascal case
+export default App  
