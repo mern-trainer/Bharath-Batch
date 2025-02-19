@@ -1,0 +1,3 @@
+1. Build a component that toggles between two states (e.g., 'on' and 'off') when a button is clicked. Display the current state in the UI.
+2. You need to manage the state of a checkbox. Create a React component that tracks whether the checkbox is checked or not and displays a message based on its state.
+3. Build a "like" button that increments the number of likes every time it is clicked. Display the total number of likes in the UI.
