@@ -3,9 +3,10 @@
 // without writing a class
 
 import StateHook from "./Pages/StateHook"
+import TodoList from "./Pages/TodoList"
 
 const App = () => {
-    return <StateHook />
+    return <TodoList />
 }
 
 export default App  
