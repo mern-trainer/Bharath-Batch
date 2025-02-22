@@ -2,6 +2,7 @@
 // Hooks -> Hooks are functions that let you use state and other React features 
 // without writing a class
 
+import AdvancedTodo from "./Pages/AdvancedTodo"
 import ParentComponent from "./Pages/ParentComponent"
 import StateHook from "./Pages/StateHook"
 import TodoList from "./Pages/TodoList"
@@ -10,7 +11,8 @@ import TodoList from "./Pages/TodoList"
 
 const App = () => {
     // return <ParentComponent />
-    return <TodoList />
+    // return <TodoList />
+    return <AdvancedTodo />
 }
 
 export default App  
