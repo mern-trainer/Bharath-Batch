@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { toast } from "react-toastify"
 import TodoListCard from "../Components/TodoListCard"
+import { Link } from "react-router"
 
 const TodoList = () => {
 
@@ -31,6 +32,7 @@ const TodoList = () => {
             {/* controlled input */}
             <input value={task} onChange={(event) => setTask(event.target.value)} type="text" placeholder="Eg: Buy Groceries" className="p-2 w-100 border border-2 border-secondary" style={{outline: 0}}/>
             <button className="btn btn-secondary w-100 rounded-0 mt-2">Add Task</button>
+            <Link to="/todo/advanced">Go to Advanced</Link>
         </form>
         <div className="w-50 d-flex flex-column gap-2">
             {
