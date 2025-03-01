@@ -1,13 +1,17 @@
-import { useState } from "react"
-import { v4 as uuidv4 } from "uuid"
+import { useContext, useState } from "react"
+import { v4 } from "uuid"
 import DisplayTask from "../Components/DisplayTask"
 import { toast } from "react-toastify"
+import { context } from "../App"
 
 const AdvancedTodo = () => {
 
+    const ctx = useContext(context)
     const [task, setTask] = useState("")
     const [taskList, setTaskList] = useState([])
 
+    console.log(ctx);
+    
     const handleSubmit = (e) => {
         e.preventDefault()
         if (task.trim() == "") {
@@ -19,12 +23,13 @@ const AdvancedTodo = () => {
         }
         const dateTime = new Date().toISOString()
         const taskObj = {
-            id: uuidv4(),
+            id: v4(),
             title: task,
             status: "Pending",
             createdAt: dateTime,
             updatedAt: dateTime
         }
+        console.log(taskObj);
         setTaskList([taskObj, ...taskList])
         setTask("")
         return toast.success("Task added successfully")
