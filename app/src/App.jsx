@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router"
 import TodoList from "./Pages/TodoList"
 import AdvancedTodo from "./Pages/AdvancedTodo"
 import ContextPage from "./Pages/Context"
+import EffectPage from "./Pages/EffectPage"
 
 const App = () => {
     return <BrowserRouter>
@@ -10,6 +11,8 @@ const App = () => {
             <Route path="/todo/advanced" Component={AdvancedTodo} />
 
             <Route path="/context" Component={ContextPage} />
+            
+            <Route path="/effect" Component={EffectPage} />
 
             <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
