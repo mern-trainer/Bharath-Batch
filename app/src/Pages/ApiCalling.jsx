@@ -36,10 +36,12 @@ const ApiCalling = () => {
             <div className="row p-2">
                 {
                     users.map(user => {
-                        return <div key={user.id} className="col-12 p-3 col-sm-6 col-md-4 col-xl-3  text-center">
-                            <h5><img src={user.image} alt={user.firstName} className="rounded-circle me-2" style={{width: "30px", height: "30px"}}/>{user.firstName} {user.lastName}</h5>
-                            <div className="text-truncate">{user.email}</div>
-                            <div>{user.phone}</div>
+                        return <div key={user.id} className="col-12 p-3 col-sm-6 col-md-4 col-xl-3  text-start">
+                            <div className="d-flex align-items-center justify-content-start gap-2"><img src={user.image} alt={user.firstName} className="rounded-circle me-2" style={{width: "30px", height: "30px"}}/><h5 className="text-truncate">{user.firstName} {user.lastName}</h5></div>
+                            <div className="text-truncate">Email: {user.email}</div>
+                            <div className="text-truncate">Mobile: {user.phone}</div>
+                            <div className="text-truncate">DOB: {user.birthDate}</div>
+                            <div className="text-truncate">Gender: {user.gender}</div>
                         </div>
                     })
                 }
