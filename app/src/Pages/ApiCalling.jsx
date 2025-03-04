@@ -1,7 +1,7 @@
-import axios from "axios"
 import { useEffect, useState } from "react"
 import { FaArrowRotateRight } from "react-icons/fa6"
 import { toast } from "react-toastify"
+import { api } from "../axios"
 
 // axios -> GET, POST, PUT, DELETE, PATCH
 // get -> fetch data from server
@@ -19,7 +19,7 @@ const ApiCalling = () => {
         try {
             const limit = 10
             const skip = (page - 1) * limit
-            const { data } = await axios.get(`https://dummyjson.com/users?limit=${limit}&skip=${skip}`)
+            const { data } = await api.get(`/users?limit=${limit}&skip=${skip}`)
             setUsers(users => ([...users, ...data.users]));
         } catch (err) {
             return toast.error("Error occured while fetching users.")
