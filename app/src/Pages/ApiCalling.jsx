@@ -1,6 +1,14 @@
+import axios from "axios"
 import { useEffect, useState } from "react"
 import { FaArrowRotateRight } from "react-icons/fa6"
 import { toast } from "react-toastify"
+
+// axios -> GET, POST, PUT, DELETE, PATCH
+// get -> fetch data from server
+// post -> send data to server
+// put -> replace data on server
+// delete -> delete data from server
+// patch -> partial update
 
 const ApiCalling = () => {
 
@@ -11,9 +19,8 @@ const ApiCalling = () => {
         try {
             const limit = 10
             const skip = (page - 1) * limit
-            const response = await fetch(`https://dummyjson.com/users?limit=${limit}&skip=${skip}`)
-            const res = await response.json()
-            setUsers(users => ([...users, ...res.users]));
+            const { data } = await axios.get(`https://dummyjson.com/users?limit=${limit}&skip=${skip}`)
+            setUsers(users => ([...users, ...data.users]));
         } catch (err) {
             return toast.error("Error occured while fetching users.")
         }
