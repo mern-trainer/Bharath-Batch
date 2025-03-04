@@ -3,6 +3,7 @@ import TodoList from "./Pages/TodoList"
 import AdvancedTodo from "./Pages/AdvancedTodo"
 import ContextPage from "./Pages/Context"
 import EffectPage from "./Pages/EffectPage"
+import ApiCalling from "./Pages/ApiCalling"
 
 const App = () => {
     return <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => {
             <Route path="/context" Component={ContextPage} />
             
             <Route path="/effect" Component={EffectPage} />
+            <Route path="/api" Component={ApiCalling} />
 
             <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
